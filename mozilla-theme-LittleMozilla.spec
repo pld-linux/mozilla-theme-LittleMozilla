@@ -4,7 +4,7 @@ Name:		mozilla-theme-LittleMozilla
 Version:	1.2
 %define	fver	%(echo %{version} | tr -d .)
 %define		_realname	littlemozilla_%{fver}
-Release:	1
+Release:	2
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://downloads.uk1.mozdev.org/rsync/themes/themes/%{_realname}.xpi
