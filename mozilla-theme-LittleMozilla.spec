@@ -1,0 +1,45 @@
+Summary:	Minimal chrome, maximum usability
+Summary(pl):	Ma쿮 ikonki, maksymalna u퓓teczno뜻
+Name:		mozilla-theme-LittleMozilla
+Version:	1.0
+%define	fver	%(echo %{version} | tr -d .)
+%define		_realname	littlemozilla_%{fver}
+Release:	1
+License:	GPL
+Group:		X11/Applications/Networking
+Source0:	http://downloads.mozdev.org/themes/%{_realname}.jar
+Source1:	%{_realname}-installed-chrome.txt
+URL:		http://themes.mozdev.org/skins/littlemozilla.html
+BuildArch:	noarch
+Requires:	mozilla >= 1.0-7
+BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
+
+%define		_prefix		/usr/X11R6
+%define		_chromedir	%{_libdir}/mozilla/chrome
+
+%description
+Minimal chrome, maximum usability
+
+%description -l pl
+Ma쿮 ikonki, maksymalna u퓓teczno뜻
+
+%prep
+
+%install
+rm -rf $RPM_BUILD_ROOT
+install -d $RPM_BUILD_ROOT%{_chromedir}
+install %{SOURCE0} %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
+
+%post 
+cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
+
+%postun
+cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
+
+%clean 
+rm -rf $RPM_BUILD_ROOT
+
+%files
+%defattr(644,root,root,755)
+%{_chromedir}/%{_realname}.jar
+%{_chromedir}/%{_realname}-installed-chrome.txt
