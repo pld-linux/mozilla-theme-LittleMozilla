@@ -1,9 +1,9 @@
 Summary:	Minimal chrome, maximum usability
 Summary(pl):	Ma³e ikonki, maksymalna u¿yteczno¶æ
 Name:		mozilla-theme-LittleMozilla
+%define		_realname	littlemozilla
 Version:	1.6b
 %define	fver	%(echo %{version} | tr -d .)
-%define		_realname	littlemozilla
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
@@ -12,7 +12,6 @@ Source0:	http://downloads.mozdev.org/themes/themes/%{_realname}_%{fver}.jar
 # Source0-size:	214658
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/themes/littlemozilla.html
-BuildRequires:	unzip
 Requires(post,postun):	textutils
 Requires:	mozilla >= 1.5
 BuildArch:	noarch
