@@ -18,10 +18,10 @@ BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 %define		_chromedir	%{_libdir}/mozilla/chrome
 
 %description
-Minimal chrome, maximum usability
+Minimal chrome, maximum usability.
 
 %description -l pl
-Ma쿮 ikonki, maksymalna u퓓teczno뜻
+Ma쿮 ikonki, maksymalna u퓓teczno뜻.
 
 %prep
 
@@ -30,14 +30,14 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
 install %{SOURCE0} %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
+%clean 
+rm -rf $RPM_BUILD_ROOT
+
 %post 
 cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
 
 %postun
 cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
-
-%clean 
-rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
