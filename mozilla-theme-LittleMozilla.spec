@@ -1,23 +1,24 @@
 Summary:	Minimal chrome, maximum usability
 Summary(pl):	Ma³e ikonki, maksymalna u¿yteczno¶æ
 Name:		mozilla-theme-LittleMozilla
-Version:	1.2
+Version:	1.6b
 %define	fver	%(echo %{version} | tr -d .)
-%define		_realname	littlemozilla_%{fver}
-Release:	2
+%define		_realname	littlemozilla
+Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://downloads.uk1.mozdev.org/rsync/themes/themes/%{_realname}.xpi
-# Source0-md5:	b0e634c1cfc0bed04ed5b1337097ef23
+Source0:	http://downloads.mozdev.org/themes/themes/%{_realname}_%{fver}.jar
+# Source0-md5:	3f81d435d3599dd4c9e1efa7a9362ba6
+# Source0-size:	214658
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/themes/littlemozilla.html
 BuildRequires:	unzip
 Requires(post,postun):	textutils
-Requires:	mozilla >= 1.2.1
+Requires:	mozilla >= 1.5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
-%define		_chromedir	%{_libdir}/mozilla/chrome
+%define         _chromedir      %{_datadir}/mozilla/chrome
 
 %description
 Minimal chrome, maximum usability. A theme designed to be a clean,
@@ -39,9 +40,9 @@ kolorów i symboliki.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
-unzip %{SOURCE0} %{_realname}.jar -d $RPM_BUILD_ROOT%{_chromedir}
 
-install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
+install %{SOURCE0} $RPM_BUILD_ROOT%{_chromedir}/%{_realname}.jar
+install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
