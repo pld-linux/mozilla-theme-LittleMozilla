@@ -1,18 +1,19 @@
 Summary:	Minimal chrome, maximum usability
 Summary(pl):	Ma쿮 ikonki, maksymalna u퓓teczno뜻
 Name:		mozilla-theme-LittleMozilla
-Version:	1.0
+Version:	1.2
 %define	fver	%(echo %{version} | tr -d .)
 %define		_realname	littlemozilla_%{fver}
 Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
-Source0:	http://downloads.us-east1.mozdev.org/themes/%{_realname}.jar
-# Source0-md5:	f5f059dc424eccee96674c45b7a4f98d
+Source0:	http://downloads.uk1.mozdev.org/rsync/themes/themes/%{_realname}.xpi
+# Source0-md5:	b0e634c1cfc0bed04ed5b1337097ef23
 Source1:	%{_realname}-installed-chrome.txt
-URL:		http://themes.mozdev.org/skins/littlemozilla.html
+URL:		http://themes.mozdev.org/themes/littlemozilla.html
+BuildRequires:	unzip
 Requires(post,postun):	textutils
-Requires:	mozilla >= 1.0-7
+Requires:	mozilla >= 1.2.1
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
@@ -20,6 +21,10 @@ BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
 %description
 Minimal chrome, maximum usability.
+Designed to be a clean, simple and consequent UI for the Mozilla platform.
+Focus on reduced screen space usage, improved interaction (almost everything
+that can be clicked, responds on mouse hovering, etc.) Consequent use of
+colours, and symbolics.
 
 %description -l pl
 Ma쿮 ikonki, maksymalna u퓓teczno뜻.
@@ -29,8 +34,9 @@ Ma쿮 ikonki, maksymalna u퓓teczno뜻.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT%{_chromedir}
+unzip %{SOURCE0} %{_realname}.jar -d $RPM_BUILD_ROOT%{_chromedir}
 
-install %{SOURCE0} %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
+install %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
