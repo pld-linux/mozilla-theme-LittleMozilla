@@ -1,0 +1,8 @@
+skin,install,url,jar:resource:/chrome/littlemozilla.jar!/
+skin,install,url,jar:resource:/chrome/littlemozilla.jar!/global/
+skin,install,url,jar:resource:/chrome/littlemozilla.jar!/chatzilla/
+skin,install,url,jar:resource:/chrome/littlemozilla.jar!/communicator/
+skin,install,url,jar:resource:/chrome/littlemozilla.jar!/editor/
+skin,install,url,jar:resource:/chrome/littlemozilla.jar!/messenger/
+skin,install,url,jar:resource:/chrome/littlemozilla.jar!/navigator/
+skin,install,url,jar:resource:/chrome/littlemozilla.jar!/inspector/
