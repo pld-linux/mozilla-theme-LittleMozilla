@@ -8,6 +8,7 @@ Release:	1
 License:	GPL
 Group:		X11/Applications/Networking
 Source0:	http://downloads.mozdev.org/themes/%{_realname}.jar
+# Source0-md5:	37a128bdd6a5ec81e2dc9ec654cd8dde
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/skins/littlemozilla.html
 Requires(post,postun):	textutils
