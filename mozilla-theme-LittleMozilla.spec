@@ -21,14 +21,19 @@ BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 %define		_chromedir	%{_libdir}/mozilla/chrome
 
 %description
-Minimal chrome, maximum usability.
-Designed to be a clean, simple and consequent UI for the Mozilla platform.
-Focus on reduced screen space usage, improved interaction (almost everything
-that can be clicked, responds on mouse hovering, etc.) Consequent use of
+Minimal chrome, maximum usability. A theme designed to be a clean,
+simple and consequent UI for the Mozilla platform. Focus on reduced
+screen space usage, improved interaction (almost everything that can
+be clicked, responds on mouse hovering, etc.). Consequent use of
 colours, and symbolics.
 
 %description -l pl
-Ma³e ikonki, maksymalna u¿yteczno¶æ.
+Ma³e ikonki, maksymalna u¿yteczno¶æ. Motyw zaprojektowany tak, aby by³
+przejrzystym, prostym i konsekwentnym interfejsem u¿ytkownika dla
+platformy Mozilli. Skupiono siê na ograniczonym u¿yciu przestrzeni
+ekranu, zwiêkszonej interakcji (prawie wszystko mo¿e byæ klikniête,
+odpowiada na zbli¿enie kursora myszy itd.). Konsekwentne u¿ycie
+kolorów i symboliki.
 
 %prep
 
