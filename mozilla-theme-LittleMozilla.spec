@@ -10,8 +10,9 @@ Group:		X11/Applications/Networking
 Source0:	http://downloads.mozdev.org/themes/%{_realname}.jar
 Source1:	%{_realname}-installed-chrome.txt
 URL:		http://themes.mozdev.org/skins/littlemozilla.html
-BuildArch:	noarch
+Requires(post,postun):	textutils
 Requires:	mozilla >= 1.0-7
+BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
 %define		_chromedir	%{_libdir}/mozilla/chrome
@@ -30,13 +31,15 @@ install -d $RPM_BUILD_ROOT%{_chromedir}
 
 install %{SOURCE0} %{SOURCE1} $RPM_BUILD_ROOT%{_chromedir}
 
-%clean 
+%clean
 rm -rf $RPM_BUILD_ROOT
 
-%post 
+%post
+umask 022
 cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
 
 %postun
+umask 022
 cat %{_chromedir}/*-installed-chrome.txt >%{_chromedir}/installed-chrome.txt
 
 %files
