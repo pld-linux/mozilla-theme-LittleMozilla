@@ -17,7 +17,7 @@ Requires:	mozilla >= 1.5
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{_realname}-%{version}-root-%(id -u -n)
 
-%define         _chromedir      %{_datadir}/mozilla/chrome
+%define		_chromedir	%{_datadir}/mozilla/chrome
 
 %description
 Minimal chrome, maximum usability. A theme designed to be a clean,
