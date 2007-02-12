@@ -1,5 +1,5 @@
 Summary:	Minimal chrome, maximum usability
-Summary(pl):	Ma³e ikonki, maksymalna u¿yteczno¶æ
+Summary(pl.UTF-8):   MaÅ‚e ikonki, maksymalna uÅ¼ytecznoÅ›Ä‡
 Name:		mozilla-theme-LittleMozilla
 %define		_realname	littlemozilla
 Version:	1.6b
@@ -25,13 +25,13 @@ screen space usage, improved interaction (almost everything that can
 be clicked, responds on mouse hovering, etc.). Consequent use of
 colours, and symbolics.
 
-%description -l pl
-Ma³e ikonki, maksymalna u¿yteczno¶æ. Motyw zaprojektowany tak, aby by³
-przejrzystym, prostym i konsekwentnym interfejsem u¿ytkownika dla
-platformy Mozilli. Skupiono siê na ograniczonym u¿yciu przestrzeni
-ekranu, zwiêkszonej interakcji (prawie wszystko mo¿e byæ klikniête,
-odpowiada na zbli¿enie kursora myszy itd.). Konsekwentne u¿ycie
-kolorów i symboliki.
+%description -l pl.UTF-8
+MaÅ‚e ikonki, maksymalna uÅ¼ytecznoÅ›Ä‡. Motyw zaprojektowany tak, aby byÅ‚
+przejrzystym, prostym i konsekwentnym interfejsem uÅ¼ytkownika dla
+platformy Mozilli. Skupiono siÄ™ na ograniczonym uÅ¼yciu przestrzeni
+ekranu, zwiÄ™kszonej interakcji (prawie wszystko moÅ¼e byÄ‡ klikniÄ™te,
+odpowiada na zbliÅ¼enie kursora myszy itd.). Konsekwentne uÅ¼ycie
+kolorÃ³w i symboliki.
 
 %prep
 
