@@ -1,5 +1,5 @@
 Summary:	Minimal chrome, maximum usability
-Summary(pl.UTF-8):   Małe ikonki, maksymalna użyteczność
+Summary(pl.UTF-8):	Małe ikonki, maksymalna użyteczność
 Name:		mozilla-theme-LittleMozilla
 %define		_realname	littlemozilla
 Version:	1.6b
